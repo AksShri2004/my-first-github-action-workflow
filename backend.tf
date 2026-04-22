@@ -1,5 +1,6 @@
 terraform {
   backend "gcs" {
-      bucket = "${google_storage_bucket.default.name}"
+      bucket = "gh-action-demo-tf-state"
+      prefix = "terraform/state"
   }
 }
